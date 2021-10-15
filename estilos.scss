@@ -1,0 +1,35 @@
+// no se muestra en css
+
+// Importamos los parciales solo con el nombre
+
+@import'footer';
+
+//creamos variables de Sass
+$celeste: skyblue;
+$rojo: red;
+// eSTA VARIABLE LA CREE PARA HACER X
+$patito: yellow;
+body {
+    background-color: blue;
+}
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+ // Con & eliminamos el espacio que genera nesting
+    &-item {
+        flex-grow: 1;
+    
+     &_link {
+        display: block;
+        background-color: tomato;
+        color: beige;
+        text-align: center;
+        padding:  8px 0;
+
+        &:hover{
+            background-color: darken(tomato, 20%);
+        }
+    }
+}
+}
